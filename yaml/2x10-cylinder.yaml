@@ -1,0 +1,170 @@
+nodes:
+  Node1: [0, 0]
+  Node2: [1, 0]
+  Node3: [2, 0]
+  Node4: [3, 0]
+  Node5: [4, 0]
+  Node6: [5, 0]
+  Node7: [6, 0]
+  Node8: [7, 0]
+  Node9: [8, 0]
+  Node10: [9, 0]
+  Node11: [10, 0]
+
+  Node12: [0, 1]
+  Node13: [1, 1]
+  Node14: [2, 1]
+  Node15: [3, 1]
+  Node16: [4, 1]
+  Node17: [5, 1]
+  Node18: [6, 1]
+  Node19: [7, 1]
+  Node20: [8, 1]
+  Node21: [9, 1]
+  Node22: [10, 1]
+
+  Node23: [0, 2]
+  Node24: [1, 2]
+  Node25: [2, 2]
+  Node26: [3, 2]
+  Node27: [4, 2]
+  Node28: [5, 2]
+  Node29: [6, 2]
+  Node30: [7, 2]
+  Node31: [8, 2]
+  Node32: [9, 2]
+  Node33: [10, 2]
+
+connections:
+  bar:
+    - [Node1, Node13]
+    - [Node2, Node14]
+    - [Node3, Node15]
+    - [Node4, Node16]
+    - [Node5, Node17]
+    - [Node6, Node18]
+    - [Node7, Node19]
+    - [Node8, Node20]
+    - [Node9, Node21]
+    - [Node10, Node22]
+
+    - [Node2, Node12]
+    - [Node3, Node13]
+    - [Node4, Node14]
+    - [Node5, Node15]
+    - [Node6, Node16]
+    - [Node7, Node17]
+    - [Node8, Node18]
+    - [Node9, Node19]
+    - [Node10, Node20]
+    - [Node11, Node21]
+
+    - [Node12, Node24]
+    - [Node13, Node25]
+    - [Node14, Node26]
+    - [Node15, Node27]
+    - [Node16, Node28]
+    - [Node17, Node29]
+    - [Node18, Node30]
+    - [Node19, Node31]
+    - [Node20, Node32]
+    - [Node21, Node33]
+
+    - [Node13, Node23]
+    - [Node14, Node24]
+    - [Node15, Node25]
+    - [Node16, Node26]
+    - [Node17, Node27]
+    - [Node18, Node28]
+    - [Node19, Node29]
+    - [Node20, Node30]
+    - [Node21, Node31]
+    - [Node22, Node32]    
+
+  string:
+    - String1: [Node1, Node2]
+    - [Node2, Node3]
+    - [Node3, Node4]
+    - [Node4, Node5]
+    - [Node5, Node6]
+    - [Node6, Node7]
+    - [Node7, Node8]
+    - [Node8, Node9]
+    - [Node9, Node10]
+    - [Node10, Node11]
+
+    - [Node12, Node13]
+    - [Node13, Node14]
+    - [Node14, Node15]
+    - [Node15, Node16]
+    - [Node16, Node17]
+    - [Node17, Node18]
+    - [Node18, Node19]
+    - [Node19, Node20]
+    - [Node20, Node21]
+    - [Node21, Node22]
+
+    - [Node1, Node12]
+    - [Node2, Node13]
+    - [Node3, Node14]
+    - [Node4, Node15]
+    - [Node5, Node16]
+    - [Node6, Node17]
+    - [Node7, Node18]
+    - [Node8, Node19]
+    - [Node9, Node20]
+    - [Node10, Node21]
+    
+    - [Node23, Node24]
+    - [Node24, Node25]
+    - [Node25, Node26]
+    - [Node26, Node27]
+    - [Node27, Node28]
+    - [Node28, Node29]
+    - [Node29, Node30]
+    - [Node30, Node31]
+    - [Node31, Node32]
+    - [Node32, Node33]
+
+    - [Node12, Node23]
+    - [Node13, Node24]
+    - [Node14, Node25]
+    - [Node15, Node26]
+    - [Node16, Node27]
+    - [Node17, Node28]
+    - [Node18, Node29]
+    - [Node19, Node30]
+    - [Node20, Node31]
+    - [Node21, Node32]
+    
+    
+builders:
+  string:
+    stiffness: 100
+    type: string
+    initial_length_ratio: 0.95
+  
+  # inside_string:
+  #   stiffness: 100
+  #   type: string
+  #   initial_length_ratio: 0.90
+
+  bar:
+    stiffness: 1000
+    type: bar
+
+pin:
+  Node1: [True, True, False]
+  Node2: [False, True, False]
+
+control:
+  - String1
+
+surface:
+  cylinder:
+    radius: 1.432394487827
+
+  linked_nodes:
+    - [Node1, Node11]
+    - [Node12, Node22]
+    - [Node23, Node33]

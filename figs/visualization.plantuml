@@ -1,0 +1,18 @@
+@startuml visualization
+set separator none
+
+package visualization.py <<Folder>> {
+class Visualization {
+    tensegrity : Tensegrity
+    .. Internal Attributes ..
+    fig : matplotlib.figure.Figure
+    ax : matplotlib.axes.Axes
+    __
+    plot()
+    .. Internal Methods ..
+    _plot_2d()
+    _plot_2_5d()
+    _plot_3d()
+}
+}
+@enduml

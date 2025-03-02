@@ -1,0 +1,41 @@
+nodes:
+  Node1: [.2894, 0.3298, 0.0711]
+  Node2: [.1381, 0.2204, 0.0469]
+  Node3: [.2999, .1438, 0.0565]
+  Node4: [0.2455, 0.3252, .2738]
+  Node5: [.1544, 0.2084, .2938]
+  Node6: [.2909, .2088, .2942]
+
+connections:
+  bars:
+    - bar1-5: [Node1, Node5]
+    - bar2-6: [Node2, Node6]
+    - bar3-4: [Node3, Node4]
+
+
+  strings:
+    - String1-4: [Node1, Node4]
+    - String2-5: [Node2, Node5]
+    - String3-6: [Node3, Node6]
+    - String4-5: [Node4, Node5]
+    - String4-6: [Node4, Node6]
+    - String5-6: [Node5, Node6]
+    
+builders:
+  strings:
+    stiffness: 136485 #N/m
+    type: string
+    initial_length_ratio: 0.95
+
+  bars:
+    stiffness: 9162687.361 #N/m
+    type: bar
+  
+
+pin:
+  Node1: [True, True, True]
+  Node2: [True, True, True]
+  Node3: [True, True, True]
+
+control:
+  - String1-4

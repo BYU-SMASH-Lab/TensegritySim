@@ -1,0 +1,23 @@
+@startuml tensegrity_solver
+set separator none
+
+package tensegrity_solver.py <<Folder>> {
+class TensegritySolver {
+    tensegrity : Tensegrity
+    __
+    set_forces(forces : dict)
+    solve()
+    .. Internal Methods ..
+    _objective()
+    _spring_connection_energy()
+    _spring_connection_energy_derivative()
+    _length_derivative()
+    _connection_length()
+    _node_distance()
+    _surface_constraints()
+    _create_initial_guess()
+    _get_nodes_from_input()
+}
+}
+
+@enduml

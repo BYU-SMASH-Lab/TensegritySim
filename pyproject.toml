@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TensegritySim"
+version = "1.0.0"
+authors = [
+    { name="Austin Brown", email="austinbrown101@msn.com" },
+]
+description = "A tensegrity simulation library."
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+keywords = ["tensegrity"]
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "PyYAML",
+    "scipy",
+]
+
+[tool.setuptools]
+packages = ["TensegritySim"]

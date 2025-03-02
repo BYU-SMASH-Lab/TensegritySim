@@ -1,0 +1,48 @@
+@startuml data_structures
+set separator none
+
+package data_structures.py <<Folder>> {
+
+class Node {
+    name : string
+    position : ndarray[3]
+}
+
+class Connection {
+    nodes : List[Node]
+    connection_type : ConnectionType
+    stiffness : float
+    initial_length : float
+    force : float
+    name : String
+    current_length(linked_nodes) : float
+    update_force(current_length : float)
+}
+
+class Surface {
+    shape : Dict
+    linked_nodes : List[Tuple[Node, Node]]
+}
+
+class Tensegrity {
+    nodes : List[Node]
+    connections : List[Connection]
+    pins : Dict[str, List[bool]]
+    controls : List[Connection]
+    surface : Surface
+    dim : int
+    change_control_lengths(delta_lengths : *float)
+    update_forces()
+    get_control_order() : String
+    reset_control_lengths()
+}
+
+Connection o-- ConnectionType
+
+enum ConnectionType {
+    STRING
+    BAR
+}
+
+}
+@enduml
