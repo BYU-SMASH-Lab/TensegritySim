@@ -14,9 +14,9 @@ class TensegritySolver:
     
     Attributes:
         tensegrity (Tensegrity): The tensegrity object containing nodes and connections.
-        dim (int): The dimension of the optimization problem (defaults to tensegrity's dim).
+        dim (int): The dimension of the optimization problem (default is 2).
     """
-    def __init__(self, tensegrity: Tensegrity) -> None:
+    def __init__(self, tensegrity: Tensegrity, dim: int = 2) -> None:
         """
         Initializes an Optimization object.
 
@@ -29,9 +29,7 @@ class TensegritySolver:
         """
         self.tensegrity = tensegrity
 
-        self.dim = tensegrity.dim
-        if self.dim == 2.5:
-            self.dim = 2
+        self.dim = dim
 
         self.node_indices = {node.name: i for i, node in enumerate(self.tensegrity.nodes)}
 
@@ -339,3 +337,4 @@ class TensegritySolver:
         x = x.reshape(-1, self.dim)
 
         return x
+

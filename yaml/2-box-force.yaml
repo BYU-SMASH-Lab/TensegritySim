@@ -1,11 +1,11 @@
 nodes:
-  Node1: [0, 0]
-  Node2: [1, 0]
-  Node3: [1, 1]
-  Node4: [0, 1]
+  Node1: [0, 0, 0]
+  Node2: [1, 0, 0]
+  Node3: [1, 1, 0]
+  Node4: [0, 1, 0]
 
-  Node5: [2, 0]
-  Node6: [2, 1]
+  Node5: [2, 0, 0]
+  Node6: [2, 1, 0]
 
 connections:
   bars:
@@ -49,4 +49,5 @@ builders:
 
 control:
   - String1
+
 
